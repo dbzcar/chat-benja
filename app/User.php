@@ -26,4 +26,14 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+
+    public function conversations()
+    {
+        return \App\Conversation::where('user1',$this->id)->orWhere('user2',$this->id)->get();
+    }
+    public function messages()
+    {
+        return $this->hasMany('App\Message');
+    }
 }
