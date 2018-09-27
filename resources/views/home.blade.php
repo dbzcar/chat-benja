@@ -26,7 +26,7 @@
         </div>
         <div class="col-md-8">
             <div class="panel panel-default">
-                <div class="panel-heading">Conversations</div>
+                <div class="panel-heading">Conversaciones</div>
 
                 <div class="panel-body">
                     @foreach($conversations as $conversation)
