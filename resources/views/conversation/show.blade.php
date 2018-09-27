@@ -57,7 +57,7 @@
 @endsection
 
 @section('additional_js')
-    <script src="https://cdn.socket.io/socket.io-1.3.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
     <script>
         var socket = io.connect('http://127.0.0.1:8890');
         socket.emit('add user', {'client':{{Auth::user()->id}},'conversation':{{$conversation->id}}});

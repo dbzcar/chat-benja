@@ -19,6 +19,14 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+     <script>
+        window.Laravel = <?php echo json_encode([
+            'csrfToken' => csrf_token(),
+        ]); ?>
+    </script>
+
+    @yield('additional_css')
 </head>
 <body>
     <div id="app">
@@ -73,7 +81,10 @@
 
         <main class="py-4">
             @yield('content')
+                       
         </main>
+        
     </div>
+    @yield('additional_js') 
 </body>
 </html>
